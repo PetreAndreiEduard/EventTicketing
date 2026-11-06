@@ -1,0 +1,56 @@
+﻿@model EventTicketing.Models.Event
+@{
+    ViewData["Title"] = "Stripe Checkout";
+}
+
+<div class="container mt-5" style="max-width: 550px;">
+    <div class="card shadow border-0">
+        <div class="card-header bg-primary text-white p-3 d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Stripe Secure Checkout</h5>
+            <span class="badge bg-light text-primary">SANDBOX TEST MODE</span>
+        </div>
+        <div class="card-body p-4">
+            <h4 class="mb-1">@Model.Title</h4>
+            <p class="text-muted mb-3">@Model.Location | @Model.EventDate.ToString("dd MMM yyyy HH:mm")</p>
+            <div class="alert alert-secondary d-flex justify-content-between align-items-center">
+                <span>Total Amount to Pay:</span>
+                <strong class="fs-4 text-success">@Model.TicketPrice.ToString("0.00") RON</strong>
+            </div>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form asp-action="ProcessPayment" asp-controller="Tickets" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="eventId" value="@Model.IdEvent" />
+
+                <div class="mb-3">
+                    <label class="form-label">Cardholder Name</label>
+                    <input type="text" name="cardHolder" class="form-control" placeholder="ANDREI PETRE" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Card Number (Stripe Test Card)</label>
+                    <input type="text" name="cardNumber" class="form-control" value="4242 4242 4242 4242" maxlength="19" required />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Expiry Date</label>
+                        <input type="text" name="expiry" class="form-control" placeholder="12/28" value="12/28" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">CVC / CVV</label>
+                        <input type="password" name="cvv" class="form-control" placeholder="123" value="424" maxlength="4" required />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+                    Pay @Model.TicketPrice.ToString("0.00") RON with Stripe
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

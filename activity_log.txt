@@ -1,0 +1,9 @@
+[2026-11-05 18:27:08] User: adypetre26@gmail.com | Action: Database error on register: An error occurred while saving the entity changes. See the inner exception for details.
+[2026-11-05 18:32:17] User: adypetre26@gmail.com | Action: User registered with role Organizer
+[2026-11-05 18:32:35] User: adypetre26@gmail.com | Action: User logged in successfully
+[2026-11-05 20:12:12] User: adypetre26@gmail.com | Action: User logged in successfully
+[2026-11-05 21:38:37] User: adypetre26@gmail.com | Action: User logged in successfully
+[2026-11-05 21:42:01] User: adypetre26@gmail.com | Action: Created event: Open Air Cinema: Mr. Bean Movie Night
+[2026-11-05 21:42:52] User: adypetre26@gmail.com | Action: Purchased ticket TKT-78B8EBC6E7 for event 'Open Air Cinema: Mr. Bean Movie Night' via Stripe (pi_stripe_24d9e8f0cf4441)
+[2026-11-05 21:49:52] User: adypetre26@gmail.com | Action: User logged in successfully
+[2026-11-06 08:28:38] User: adypetre26@gmail.com | Action: User logged in successfully

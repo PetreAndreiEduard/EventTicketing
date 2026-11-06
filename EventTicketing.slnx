@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../EventTicketing.Tests/EventTicketing.Tests.csproj" Id="e4ea9189-94ba-471b-9d68-f9fad6e0796b" />
+  <Project Path="EventTicketing.csproj" />
+</Solution>

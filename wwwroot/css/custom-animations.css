@@ -1,0 +1,59 @@
+﻿@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .table, .carousel {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: #ffffff;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 22px rgba(30, 60, 114, 0.16);
+    }
+
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease-in-out;
+}
+
+    .btn:hover {
+        transform: scale(1.03);
+    }
+
+.navbar {
+    background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 100%);
+    border-bottom: 2px solid #eaeaea;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 210px !important;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .table th, .table td {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home - Online Event Ticketing";
+}
+
+<div class="container mt-5">
+    <div class="card p-5 text-center shadow-sm border-0" style="background: linear-gradient(135deg, #1e3c72, #2a5298); color: white;">
+        <h1 class="display-5 fw-bold mb-3">Welcome to EventTicketing</h1>
+        <p class="lead mb-4">
+            Book tickets for live concerts, outdoor cinema nights, theater plays, and tech conferences with instant QR code delivery.
+        </p>
+        <div>
+            <a asp-controller="Events" asp-action="Index" class="btn btn-light btn-lg text-primary fw-bold px-4 me-2">
+                Explore Events
+            </a>
+            <a asp-controller="Tickets" asp-action="MyTickets" class="btn btn-outline-light btn-lg px-4">
+                View My Tickets
+            </a>
+        </div>
+    </div>
+</div>
